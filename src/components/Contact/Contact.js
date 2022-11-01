@@ -1,20 +1,18 @@
 import { useDispatch } from 'react-redux';
-import { deleteTask, toggleCompleted } from 'redux/tasksSlice';
-import css from './Contact.module.css';
+import { deleteContact } from 'redux/contactsSlice';
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
-
-  const handleDelete = () => dispatch(deleteTask(contact.id));
-
-  const handleToggle = () => dispatch(toggleCompleted(contact.id));
+  const handleDelete = () => {
+    return dispatch(deleteContact(contact.id));
+  };
 
   return (
-    <div className={css.wrapper}>
-      <p className={css.text}>
-        {contact.name} : {contact.number}
+    <div>
+      <p>
+        {contact.name}: {contact.number}
       </p>
-      <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleDelete}>Delete contact</button>
     </div>
   );
 };
