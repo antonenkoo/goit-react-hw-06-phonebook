@@ -13,6 +13,6 @@ export const App = () => {
         <Filter />
         <ContactList />
       </ListStyled>
-    </Layout>
+    </Layout> 
   );
 };
