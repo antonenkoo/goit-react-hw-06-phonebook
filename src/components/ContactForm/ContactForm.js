@@ -13,7 +13,6 @@ import {
   ErrorMessageStyled,
   ButtonStyled,
 } from '../styles.jsx';
-// import { getContacts } from 'redux/selectors.js';
 
 const initialValues = {
   name: '',
@@ -57,7 +56,7 @@ export const ContactForm = () => {
     resetForm();
   };
 
-  window.localStorage.setItem('contacts', JSON.stringify(contacts)); // запись в localStorage
+  window.localStorage.setItem('contacts', JSON.stringify(contacts));
 
   return (
     <Formik
